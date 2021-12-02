@@ -15,8 +15,7 @@ const calendarParams = {
   "CountryCode": "US",
   "IsSpeech": false,
   "IsReport": false,
-  "IsAllDay": false,
-  "impact": 2
+  "IsAllDay": false
 }
 
 ReactDOM.render(

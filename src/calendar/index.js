@@ -1,5 +1,5 @@
 import React from "react";
-import { CalendarWrapper, CalendarHeader, CalendarBody, CountryIcon, CalendarFirstLine, CalendarEventName, CalendarFirstLineLeft, CalendarBottom, CalendarData, CalendarImpact, CalendarImpactIcon } from "./styles/styles.ts";
+import { CalendarWrapper, CalendarHeader, CalendarBody, CountryIcon, CalendarFirstLine, CalendarEventName, CalendarFirstLineLeft, CalendarBottom, CalendarData, CalendarImpact, CalendarImpactIcon } from "./styles/calendar.ts";
 import {
   FXSGlobals,
   FXSBackgrounds,
@@ -31,19 +31,19 @@ function Calendar({ calendarParams: { Name, Description, Actual, Consensus, Prev
               <CountryIcon countryUrl={`https://staticcontent.fxstreet.com/website/img/icons/flag_${CountryCode.toLowerCase()}.svg`} />
               <CalendarEventName className="fxs_insights_calendar_name fxs_txt_size_small fxs_txt_weight_400">{Name}</CalendarEventName>
             </CalendarFirstLineLeft>
-              <CalendarImpact><span className="fxs_txt_size_xsmall">Impact: </span> <CalendarImpactIcon className="medium" /></CalendarImpact>
+              <CalendarImpact><span className="fxs_txt_size_xsmall">Impact: </span> <CalendarImpactIcon className="high" /></CalendarImpact>
           </CalendarFirstLine>
           <p className="fxs_txt_size_xsmall">
-            <strong>source: </strong>{UrlSource ? <a href={UrlSource} onClick="function(e){e.stopPropagation()}">{Source}</a> : { Source }} </p>
+            <strong>source: </strong>{UrlSource ? <a href={UrlSource} onClick="function(e){e.stopPropagation()}" >{Source}</a> : { Source }} </p>
           <CalendarBottom>
             <p className="fxs_txt_size_xsmall fxs_txt_light_1_clr" dangerouslySetInnerHTML={{ __html: Description }} />
             {hasData &&
               <CalendarData className="fxs_bg_light_5_clr">
                 <thead>
                   <tr>
-                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr">Actual</th>
-                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr">Previous</th>
-                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr">Consensus</th>
+                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr fxs_txt_weight_400">Actual</th>
+                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr fxs_txt_weight_400">Previous</th>
+                    <th className="fxs_txt_size_xsmall fxs_txt_light_1_clr fxs_txt_weight_400">Consensus</th>
                   </tr>
                 </thead>
                 <tbody>

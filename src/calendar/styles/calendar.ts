@@ -45,18 +45,32 @@ export const CountryIcon = styled.span<{ countryUrl: string }>`
     background-position: 50% ;
     background-size: cover;
     margin-right: 10px;
+    flex: 0 0 25px;
 `;
 
 export const CalendarBottom = styled.div`
     display:flex;
+    width:100%;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    @media(min-width:680px){
+        flex-wrap: nowrap;
+    }
 `;
 export const CalendarData = styled.table`
+    width:100%; 
+    flex: 0 0  100%;
+    @media(min-width:680px){
+        width:auto;
+        flex: 1 1 auto;
+        margin-left: 1rem;
+    }
     border: 1px solid #DDDEDF;
     border-radius:3px;
     thead{
         tr{
             th{
-                text-align:center;
+                text-align:right;
                 line-height:30px;
                 padding: 0 20px;
             }
@@ -85,10 +99,10 @@ export const CalendarImpactIcon = styled.span`
     &:before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+        top: -1px;
+        left: -1px;
+        bottom: -1px;
+        right: -1px;
     height: 12px;
         display: block;
     }
@@ -105,6 +119,11 @@ export const CalendarImpactIcon = styled.span`
         &:before {
             background-color: #d25746;
             width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+    
         }
     }
     &.low {
